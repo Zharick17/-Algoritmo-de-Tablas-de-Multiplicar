@@ -3,20 +3,23 @@ public class Menu {
 
     private Integer numero ;
     private String nombre;
-    Scanner ver=new Scanner(System.in);
-   
-    public void Menu1(){
     
+    Scanner ver=new Scanner(System.in);
+
+    public void Menu1(){
+
        System.out.println("Cual es tu nombre: ");
        nombre = ver.nextLine();
+       
+       
     }
-
-    
 
     public void Menu2(){
+       
         System.out.println("Hola "+ nombre + " que tabla de multiplicar quieres ver del 1 al 10: "); 
-        numero = ver.nextInt();
+        numero = ver.nextInt();      
     }
+
 
     public void Ejecutar(){
         int continuar = 1;
@@ -31,30 +34,34 @@ public class Menu {
             
         }
         
-        System.out.println("Para ver otra tabla de multiplicar presiona uno "+ continuar);
+        System.out.println("Para ver otra tabla de multiplicar presiona uno "+ continuar + "  si presiona una letra se terminara el programa");
         continuar = ver.nextInt();
+       
 
         Menu2();
    
        }
     }
 
+
     public Integer getNumero() {
         return numero;
     }
+
 
     public void setNumero(Integer numero) {
         this.numero = numero;
     }
 
+
     public String getNombre() {
         return nombre;
     }
+
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
- 
-    
+   
 }
